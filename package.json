@@ -4,8 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "env-cmd -f .env.local vite --port 3000",
     "dev": "env-cmd -f .env.dev vite --port 3000",
-    "build": "env-cmd -f .env.dev vite build",
+    "prod": "env-cmd -f .env.prod vite --port 3000",
+    "build-dev": "env-cmd -f .env.dev vite build",
+    "build-prod": "env-cmd -f .env.prod vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
