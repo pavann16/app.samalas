@@ -41,6 +41,7 @@ export const authenticate = ()=>{
         var token = localStorage.getItem("token")
         if(!token){
             clearStorage();
+            return;
         }
         healthcheck().then((res)=>{
             console.log("onAppReload call");
